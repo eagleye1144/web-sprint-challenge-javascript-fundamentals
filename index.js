@@ -61,8 +61,13 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
+  function animalNames(arr){
     /*Your Code Here*/
+    const result = [];
+      arr.forEach(function(item){
+      return result.push((`name: ${item.animal_name}, scientific: ${item.scientific_name}`));
+    });
+    return result;
   }
   
 
@@ -72,8 +77,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
+  function lowerCaseNames(arr){
     /*Your Code Here*/
+    const lowerCase = arr.map(function(item){
+      return item.animal_name.toLowerCase();
+    });
+    return lowerCase;
   }
   
   
@@ -82,8 +91,12 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
+  function lowPopulationAnimals(arr){
     /*Your Code Here*/
+    const lowPop = arr.filter(function(item){
+      return item.population < 5;
+    });
+    return lowPop;
   }
   
 
@@ -93,10 +106,14 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
+  function USApop(arr){
     /*Your Code Here*/
+    const total = arr.reduce(function(accumulator, item){
+      return accumulator + item.population
+    }, 0);
+    return total;
   }
-  
+  console.log(USApop(zooAnimals));
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -106,8 +123,9 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
+  function consume(val1, val2, cb){
     /*Your Code Here */
+    return cb(val1, val2);
   }
  
   
