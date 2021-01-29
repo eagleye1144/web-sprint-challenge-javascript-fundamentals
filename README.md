@@ -26,14 +26,31 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+   
+    The biggest differnce is that forEach does not create a new array, but rather goes through the array and you can display what you want. With .map, you can change up an array, then create a new array to display it.
 
 2. Explain the difference between a callback and a higher order function.
+   
+    A call back is when a function needs to reach out to find the value of a variable. A higher order function can pass in another function as a parrameter
 
 3. What is closure?
+    
+    when a function reaches out and references its surrounding state or lexical enviournment. In other words, when an inner function reaches out to the outer function to access that variable value
 
 4. Describe the four rules of the 'this' keyword.
 
+     1. In Window/Gobal, "this" is reffering to where JavaScript is. It's a place where the language of JavaScript is. 
+        If you are in the global scope, "this" will be the window/console Object
+    2. In Implicit Binding, when "this" is used to call an object,
+         or in other words whenever there is a method is called on a object "Obj.something", the "Obj" is "this".
+    3. In New Binding, "this" works with constructer functions. it is used in the properties of the objects "this.greeting = "Hello"
+        and then it is used when you call that function.
+    4. In Explicit Binding, you are explicity binding what this is pointing to and you can overide or trump other types of Binding.
+
+
 5. Why do we need super() in an extended class?
+
+    We need to to "call" the the constructer of the parrent class to access its properties and all its methods. Or to "inherit" them. It replaces .call
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
